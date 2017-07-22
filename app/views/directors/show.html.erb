@@ -1,0 +1,73 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Director Details</h1>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-2">
+            <p>Name</p>
+        </div>
+        <div class="col-md-10">
+            <p>
+                <%= @director.name %>
+            </p>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-2">
+            <p>Birthdate</p>
+        </div>
+        <div class="col-md-10">
+            <p>
+                <%= @director.dob %>
+            </p>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-2">
+            <p> Biography</p>
+        </div>
+        <div class="col-md-10">
+            <p>
+                <%= @director.bio %>
+            </p>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-2">
+            <p>Picture</p>
+        </div>
+        <div class="col-md-10">
+            <p>
+                <img src="<%= @director.image_url %>">
+            </p>
+        </div>
+        <div class="col-md-2">
+            <p>
+                Image URL
+            </p>
+        </div>  
+        <div class="col-md-10">
+            <p>
+                <%= @director.image_url %>
+            </p>
+        </div>          
+    </div>
+</div>
+
+<a href="/directors" class="btn btn-default">
+  Go back
+</a>
+
+<a href="/directors/<%= @director.id %>/edit" class="btn btn-default">
+  Edit director
+</a>
+
+<a href="/delete_director/<%= @director.id %>" class="btn btn-default">
+  Delete director
+</a>
