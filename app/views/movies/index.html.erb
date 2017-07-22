@@ -1,0 +1,65 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>All Movies</h1>
+        </div>
+    </div>
+  
+    <div class="row">
+        <div class="col-md-12">
+            <a href="/movies/new">Add a new movie</a>
+        </div>
+    </div>
+
+  <% @list_of_movies.each do |the_movie| %>
+    <div class="well well-lg">
+        <div class="row">
+            <div class="col-md-3">Picture</div>
+            <div class="col-md-2">Title</div>
+            <div class="col-md-1">Year</div>
+            <div class="col-md-1">Duration</div>
+            <div class="col-md-5">Description</div>
+        </div>
+    
+        <div class="row">
+            <div class="col-md-3">
+                <img src="<%= the_movie.image_url %>" class="thumbnail">
+            </div>
+            <div class="col-md-2">
+                <%= the_movie.title %>
+            </div>
+            <div class="col-md-1">
+                <%= the_movie.year %>
+            </div>
+            <div class="col-md-1">
+                <%= the_movie.duration %>
+            </div>
+            <div class="col-md-5">
+                <%= the_movie.description %>
+            </div>
+            <div class = "col-md-2">
+                Image URL
+            </div>
+            <div class = "col-md-10">
+                <%= the_movie.image_url %>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="btn-group" role="group" aria-label="...">
+                <button type="button" class="btn btn-default">
+                    <a href="/movies/<%= the_movie.id %>">Show details</a>
+                </button>
+                
+                <button type="button" class="btn btn-default">
+                    <a href="/movies/<%= the_movie.id %>/edit">Edit details</a>
+                </button>
+                
+                <button type="button" class="btn btn-default">
+                    <a href="/delete_movie/<%= the_movie.id %>">Delete movie</a>
+                </button>
+            </div>
+        </div>
+    </div>
+  <%end %>
+</div>

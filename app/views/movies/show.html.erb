@@ -1,0 +1,84 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Movie Details</h1>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-2">
+            <p>Title</p>
+        </div>
+        <div class="col-md-10">
+            <p>
+                <%= @movie.title %>
+            </p>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-2">
+            <p>Year</p>
+        </div>
+        <div class="col-md-10">
+            <p>
+                <%= @movie.year %>
+            </p>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-2">
+            <p>Duration</p>
+        </div>
+        <div class="col-md-10">
+            <p>
+                <%= @movie.duration %>
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2">
+            <p>Description</p>
+        </div>
+        <div class="col-md-10">
+            <p>
+                <%= @movie.description %>
+            </p>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-2">
+            <p>Picture</p>
+        </div>
+        <div class="col-md-10">
+            <p>
+                <img src="<%= @movie.image_url %>">
+            </p>
+        </div>
+        <div class="col-md-2">
+            <p>
+                Image URL
+            </p>
+        </div>  
+        <div class="col-md-10">
+            <p>
+                <%= @movie.image_url %>
+            </p>
+        </div>          
+    </div>
+</div>
+
+<a href="/movies" class="btn btn-default">
+  Go back
+</a>
+
+<a href="/movies/<%= @movie.id %>/edit" class="btn btn-default">
+  Edit movie
+</a>
+
+<a href="/delete_movie/<%= @movie.id %>" class="btn btn-default">
+  Delete movie
+</a>
