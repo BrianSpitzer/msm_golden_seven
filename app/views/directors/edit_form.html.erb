@@ -1,41 +1,62 @@
-<h1>Edit director</h1>
-
-<form action="/update_director/<%= @director.id %>">
-    <div>
-        <label for="name">
-            Name
-        </label>
-
-        <input id="name" type="text" name="the_name" value="<%= @director.name %>">
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Edit director</h1>
+        </div>
     </div>
     
-    <div>
-        <label for="dob">
-            Dob
-        </label>
+    <form action="/update_director/<%= @director.id %>">
+        <div class="row">
+            <div class="col-md-1">
+                <label for="name">
+                    Name
+                </label>
+            </div>
 
-        <input id="dob" type="text" name="the_dob" value="<%= @director.dob %>">
-    </div>
+            <div class="col-md-11">
+                <input id="name" type="text" name="the_name" value="<%= @director.name %>" size="75">
+            </div>
+        </div>
+        
+        
+        <div class="row">
+            <div class="col-md-1">
+                <label for="dob">
+                    Dob
+                </label>
+            </div>
+
+            <div class="col-md-11">
+                <input id="dob" type="text" name="the_dob" value="<%= @director.dob %>" size="75">
+            </div>
+        </div>
+        
+        <div class="row">
+           <div class="col-md-1"> 
+               <label for="bio">
+                    Bio
+                </label>
+            </div>
+
+            <div class="col-md-11">
+                <textarea rows="10" cols="78" id="bio" name="the_bio"><%=@director.bio%></textarea>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-1">
+                <label for="image url">
+                    Image url
+                </label>
+            </div>
+
+            <div class="col-md-11">    
+                <input id="image url" type="text" name="the_image_url" value="<%= @director.image_url %>" size="75">
+            </div>
+        </div>
     
-    <div>
-        <label for="bio">
-            Bio
-        </label>
-
-        <textarea rows="10" cols="75" id="bio" name="the_bio">
-            <%= @director.bio %>
-        </textarea> 
-    </div>
-
-    <div>
-        <label for="image url">
-            Image url
-        </label>
-
-        <input id="image url" type="text" name="the_image_url" value="<%= @director.image_url %>">
-    </div>
-
-  <button>
-    Update director
-  </button>
-</form>
+      <button>
+        Update director
+      </button>
+    </form>
+</div>

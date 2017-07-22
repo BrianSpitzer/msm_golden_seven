@@ -1,39 +1,59 @@
-<h1>Add a new director</h1>
-
-<form action="/create_director">
-    <div>
-        <label for="name">
-            Name
-        </label>
-
-        <input id="name" type="text" name="the_name">
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Add a new director</h1>
+        </div>
     </div>
+
+    <form action="/create_director">
+        <div class="row">
+            <div class="col-md-1">
+                <label for="name">
+                    Name
+                </label>
+            </div>
+            <div class="col-md-11">
+                <input id="name" type="text" name="the_name" size="75">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-1">
+                <label for="dob">
+                    Dob
+                </label>
+            </div>
+
+            <div class="col-md-11">    
+                <input id="dob" type="text" name="the_dob" size="75">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-1">
+                <label for="bio">
+                    Bio
+                </label>
+            </div>
+
+            <div class="col-md-11">    
+                <input id="bio" type="text" name="the_bio" size="75">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-1">
+                <label for="image url">
+                    Image url
+                </label>
+            </div>
+            <div class="col-md-11">
+                <input id="image url" type="text" name="the_image_url" size="75">
+            </div>
+        </div>
     
-    <div>
-        <label for="dob">
-            Dob
-        </label>
-
-        <input id="dob" type="text" name="the_dob">
-    </div>
-    
-    <div>
-        <label for="bio">
-            Bio
-        </label>
-
-        <input id="bio" type="text" name="the_bio">
-    </div>
-    
-    <div>
-        <label for="image url">
-            Image url
-        </label>
-
-        <input id="image url" type="text" name="the_image_url">
-    </div>
-
-  <button>
-    Create director
-  </button>
-</form>
+      <button>
+        Create director
+      </button>
+    </form>
+</div>

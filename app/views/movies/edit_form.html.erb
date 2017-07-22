@@ -1,49 +1,74 @@
-<h1>Edit movie</h1>
-
-<form action="/update_movie/<%= @movie.id %>">
-    <div>
-        <label for="title">
-            Title
-        </label>
-
-        <input id="title" type="text" name="the_title" value="<%= @movie.title %>">
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Edit movie</h1>
+        </div>
     </div>
     
-    <div>
-        <label for="year">
-            Year
-        </label>
+    <form action="/update_movie/<%= @movie.id %>">
+        <div class="row">
+            <div class="col-md-1">
+                <label for="title">
+                    Title
+                </label>
+            </div>
 
-        <input id="year" type="text" name="the_year" value="<%= @movie.year %>">
-    </div>
+            <div class="col-md-11">
+                <input id="title" type="text" name="the_title" value="<%= @movie.title %>" size="75">
+            </div>
+        </div>
+        
+        
+        <div class="row">
+            <div class="col-md-1">
+                <label for="year">
+                    Year
+                </label>
+            </div>
+
+            <div class="col-md-11">
+                <input id="year" type="text" name="the_year" value="<%= @movie.year %>" size="75">
+            </div>
+        </div>
+        
+        <div class="row">
+           <div class="col-md-1"> 
+               <label for="duration">
+                    Duration
+                </label>
+            </div>
+
+            <div class="col-md-11">
+                <input id="duration" type="text" name="the_duration" value="<%= @movie.duration %>" size="75">
+            </div>
+        </div>
     
-    <div>
-        <label for="duration">
-            Duration
-        </label>
+        <div class="row">
+           <div class="col-md-1"> 
+               <label for="description">
+                    Description
+                </label>
+            </div>
 
-        <input id="duration" type="text" name="the_duration" value="<%= @movie.duration %>">
-    </div>
+            <div class="col-md-11">
+                <textarea rows="10" cols="78" id="description" name="the_description"><%= @movie.description %></textarea>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-1">
+                <label for="image url">
+                    Image url
+                </label>
+            </div>
 
-    <div>
-        <label for="description">
-            Description
-        </label>
-
-        <textarea rows="10" cols="75" id="description" name="the_description">
-            <%= @movie.description %>
-        </textarea> 
-    </div>
+            <div class="col-md-11">    
+                <input id="image url" type="text" name="the_image_url" value="<%= @movie.image_url %>" size="75">
+            </div>
+        </div>
     
-    <div>
-        <label for="image url">
-            Image url
-        </label>
-
-        <input id="image url" type="text" name="the_image_url" value="<%= @movie.image_url %>">
-    </div>
-
-  <button>
-    Update movie
-  </button>
-</form>
+      <button>
+        Update movie
+      </button>
+    </form>
+</div>

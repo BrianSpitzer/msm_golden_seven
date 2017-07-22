@@ -14,7 +14,7 @@
             </div>
 
             <div class="col-md-11">
-                <input id="name" type="text" name="the_name" value="<%= @actor.name %>">
+                <input id="name" type="text" name="the_name" value="<%= @actor.name %>" size="75">
             </div>
         </div>
         
@@ -27,7 +27,7 @@
             </div>
 
             <div class="col-md-11">
-                <input id="dob" type="text" name="the_dob" value="<%= @actor.dob %>">
+                <input id="dob" type="text" name="the_dob" value="<%= @actor.dob %>" size="75">
             </div>
         </div>
         
@@ -39,9 +39,7 @@
             </div>
 
             <div class="col-md-11">
-                <textarea rows="10" cols="75" id="bio" name="the_bio">
-                    <%=@actor.bio%>
-                </textarea>
+                <textarea rows="10" cols="78" id="bio" name="the_bio"><%=@actor.bio%></textarea>
             </div>
         </div>
         
@@ -53,7 +51,7 @@
             </div>
 
             <div class="col-md-11">    
-                <input id="image url" type="text" name="the_image_url" value="<%= @actor.image_url %>">
+                <input id="image url" type="text" name="the_image_url" value="<%= @actor.image_url %>" size="75">
             </div>
         </div>
     
