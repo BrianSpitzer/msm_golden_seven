@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>All Directors</h1>
+        </div>
+    </div>
+  
+    <div class="row">
+        <div class="col-md-12">
+            <a href="/directors/new">Add a new director</a>
+        </div>
+    </div>
+
+  <% @list_of_directors.each do |the_director| %>
+    <div class="row">
+        <div class="col-md-3">Picture</div>
+        <div class="col-md-2">Name</div>
+        <div class="col-md-2">Birthdate</div>
+        <div class="col-md-5">Biography</div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-3">
+            <img src="<%= the_director.image_url %>">
+        </div>
+        <div class="col-md-2">
+            <%= the_director.name %>
+        </div>
+        <div class="col-md-2">
+            <%= the_director.dob %>
+        </div>
+        <div class="col-md-5">
+            <%= the_director.bio %>
+        </div>
+    </div>
+  <%end %>
+</div>
