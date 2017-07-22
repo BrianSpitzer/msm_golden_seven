@@ -30,7 +30,9 @@
             Description
         </label>
 
-        <input id="description" type="text" name="the_description" value="<%= @movie.description %>">
+        <textarea rows="10" cols="50" id="description" name="the_description">
+            <%= @movie.description.strip %>
+        </textarea> 
     </div>
     
     <div>
