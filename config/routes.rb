@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   #READ - Directors
   # get("/", { :controller => "pictures", :action => "index" })
   get("/directors", { :controller => "directors", :action => "index" })
-  get("/:the_id", { :controller => "directors", :action => "show" })
+  get("/directors/:the_id", { :controller => "directors", :action => "show" })
   
   
   #UPDATE - Directors
