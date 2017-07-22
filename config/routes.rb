@@ -18,6 +18,25 @@ Rails.application.routes.draw do
   
   #DELETE - Directors
   get("/delete_director/:toast_id", { :controller => "directors", :action => "destroy_row" }) 
+
+  #CREATE - Actors
+  get("/actors/new", { :controller => "actors", :action => "new_form" })
+  get("/create_actor", { :controller => "actors", :action => "create_row" })
+  
+  
+  #READ - Actors
+  # get("/", { :controller => "pictures", :action => "index" })
+  get("/actors", { :controller => "actors", :action => "index" })
+  get("/actors/:the_id", { :controller => "actors", :action => "show" })
+  
+  
+  #UPDATE - Actors
+  get("/actors/:an_id/edit", { :controller => "actors", :action => "edit_form" })
+  get("/update_actor/:some_id", { :controller => "actors", :action => "update_row" })
+  
+  
+  #DELETE - Actors
+  get("/delete_actor/:toast_id", { :controller => "actors", :action => "destroy_row" }) 
   
   # # CREATE
   # get("/photos/new", { :controller => "pictures", :action => "new_form" })
