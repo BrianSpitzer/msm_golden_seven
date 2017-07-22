@@ -12,8 +12,12 @@ Rails.application.routes.draw do
   
   
   #UPDATE - Directors
+  get("/directors/:an_id/edit", { :controller => "directors", :action => "edit_form" })
+  get("/update_director/:some_id", { :controller => "directors", :action => "update_row" })
+  
   
   #DELETE - Directors
+  get("/delete_director/:toast_id", { :controller => "directors", :action => "destroy_row" }) 
   
   # # CREATE
   # get("/photos/new", { :controller => "pictures", :action => "new_form" })
