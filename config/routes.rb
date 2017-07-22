@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   
   #CREATE - Directors
-  # get("/photos/new", { :controller => "pictures", :action => "new_form" })
-  # get("/create_photo", { :controller => "pictures", :action => "create_row" })
+  get("/directors/new", { :controller => "directors", :action => "new_form" })
+  get("/create_director", { :controller => "directors", :action => "create_row" })
   
   
   #READ - Directors
